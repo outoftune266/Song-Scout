@@ -6,6 +6,7 @@ let tracklist;
 let lyrics;
 
 
+
 function getTracklist() {
     var queryURL = "https://theaudiodb.com/api/v1/json/1/track.php?m=" + albumID + "&apikey=523532";
     $.ajax({
@@ -42,10 +43,30 @@ function getLyrics() {
         console.log(response);
         $("#songTitle").text(title);
         $("#artistName").text(name);
-        lyrics = response.lyrics;
+        lyrics = response.lyrics.escapeSpecialChars();
+        //lyrics = lyrics.stringify();
+        // for (var i = 0; i < lyrics.legnth; i++) {
+        //     if (lyrics[i] = \n) {
+
+        //     }
+        // }
+        //lyrics = lyrics.escapeSpecialChars();
         $("#lyricsBox").text(lyrics);
     });
 };
+
+
+// not sure if this is needed. attempting to create line breaks
+// String.prototype.escapeSpecialChars = function() {
+//     return this.replace(/\\n/g, "\\n")
+//                .replace(/\\'/g, "\\'")
+//                .replace(/\\"/g, '\\"')
+//                .replace(/\\&/g, "\\&")
+//                .replace(/\\r/g, "\\r")
+//                .replace(/\\t/g, "\\t")
+//                .replace(/\\b/g, "\\b")
+//                .replace(/\\f/g, "\\f");
+// };
 
 //does not return useful info
 // function getTrackInfo() {
