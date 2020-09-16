@@ -6,7 +6,7 @@ let tracklist;
 let lyrics;
 
 
-function getTracks() {
+function getTracklist() {
     var queryURL = "https://theaudiodb.com/api/v1/json/1/track.php?m=" + albumID + "&apikey=523532";
     $.ajax({
         url: queryURL,
