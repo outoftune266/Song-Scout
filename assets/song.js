@@ -1,14 +1,15 @@
-let albumID = 2113128;
+let idAlbum = 2113128;
 let trackID = "3b098d24-325e-4451-89d8-4e3d0c3d8ae9";
 let name = "The Polyphonic Spree"
 let title = "Hold Me Now"
 let tracklist;
 let lyrics;
+let track;
 
 
-
+//will retrieve tracklist info
 function getTracklist() {
-    var queryURL = "https://theaudiodb.com/api/v1/json/1/track.php?m=" + albumID + "&apikey=523532";
+    var queryURL = "https://theaudiodb.com/api/v1/json/1/track.php?m=" + idAlbum + "&apikey=523532";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -17,29 +18,27 @@ function getTracklist() {
         tracklist = response;
         //to get tracks use tracklist.track[i].strTrack
         name = tracklist.track[0].strArtist
-    }
-    )
-}
+    });
+    displayTracks()
+};
 
-//does not work
-// function getTrackInfo() {
-//     var queryURL = "https://theaudiodb.com/api/v1/json/1/track-mb.php?i=" + trackID + "&apikey=523532";
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).then(function (response) {
-//         console.log(response)
-//     }
-//     )
-// }
+//displays tracklist
+function displayTracks() {
+    for (var i = 0; i < tracklist.length; i++) {
+        track = $("<li>");
+        track.text(tracklist.track[i].strTrack);
+        $("ol").append(track);
+    };
+};
 
 function getLyrics() {
+    //title = 
     var queryURL = "https://api.lyrics.ovh/v1/" + name + "/" + title;
 
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response){
+    }).then(function (response) {
         console.log(response);
         $("#songTitle").text(title);
         $("#artistName").text(name);
@@ -48,15 +47,3 @@ function getLyrics() {
         $("#lyricsBox").html(lyrics);
     });
 };
-
-//does not return useful info
-// function getTrackInfo() {
-//     var queryURL = "https://theaudiodb.com/api/v1/json/1/searchtrack.php?s=" + name + "&t=" + title + "&apikey=523532";
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).then(function (response) {
-//         console.log(response)
-//     }
-//     )
-// }
