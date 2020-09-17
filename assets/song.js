@@ -1,6 +1,6 @@
 //let idAlbum = 2113128;
-let name = "The Polyphonic Spree"
-let title = "Hold Me Now"
+let name;
+let title;
 let tracklist;
 let lyrics;
 let track;
@@ -13,26 +13,25 @@ function getTracklist() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response)
+        //console.log(response)
         tracklist = response.track;
         //to get tracks use tracklist.track[i].strTrack
         name = response.track[0].strArtist
         let trackdiv = $("<div id ='tracks'>");
         let list = $("<ol>");
         for (var i = 0; i < tracklist.length; i++) {
-            track = $("<li>").text(tracklist[i].strTrack);
-            //track.text(tracklist[i].strTrack);
+            track = $("<li class= 'song'>").text(tracklist[i].strTrack);
+            
             list.append(track);
         };
         trackdiv.append(list);
         $("#albumInfo").append(trackdiv);
     });
-    
 };
 
-
-function getLyrics() {
-    //title = 
+$("#albumInfo").on("click", "li", function(event) {
+    //console.log(event.target);
+    title = event.target.innerHTML;
     var queryURL = "https://api.lyrics.ovh/v1/" + name + "/" + title;
 
     $.ajax({
@@ -44,6 +43,6 @@ function getLyrics() {
         $("#artistName").text(name);
         lyrics = response.lyrics
         lyrics = response.lyrics.replace(/\n/ig, "</br>");
-        $("#lyricsBox").html(lyrics);
+        $("#song").html(lyrics);
     });
-};
+});

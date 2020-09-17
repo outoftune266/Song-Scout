@@ -50,3 +50,7 @@ body.home #canvas-wrapper #granim-canvas {
     background-size: cover;
     background-position: 0 85%;
 }  */
+
+li {
+    cursor: pointer;
+}
