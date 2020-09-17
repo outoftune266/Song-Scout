@@ -1,4 +1,4 @@
-let artist;
+let artist= "Weezer"
 let album = "tragic kingdom"
 let song;
 
