@@ -43,30 +43,11 @@ function getLyrics() {
         console.log(response);
         $("#songTitle").text(title);
         $("#artistName").text(name);
-        lyrics = response.lyrics.escapeSpecialChars();
-        //lyrics = lyrics.stringify();
-        // for (var i = 0; i < lyrics.legnth; i++) {
-        //     if (lyrics[i] = \n) {
-
-        //     }
-        // }
-        //lyrics = lyrics.escapeSpecialChars();
-        $("#lyricsBox").text(lyrics);
+        lyrics = response.lyrics
+        lyrics = response.lyrics.replace(/\n/ig, "</br>");
+        $("#lyricsBox").html(lyrics);
     });
 };
-
-
-// not sure if this is needed. attempting to create line breaks
-// String.prototype.escapeSpecialChars = function() {
-//     return this.replace(/\\n/g, "\\n")
-//                .replace(/\\'/g, "\\'")
-//                .replace(/\\"/g, '\\"')
-//                .replace(/\\&/g, "\\&")
-//                .replace(/\\r/g, "\\r")
-//                .replace(/\\t/g, "\\t")
-//                .replace(/\\b/g, "\\b")
-//                .replace(/\\f/g, "\\f");
-// };
 
 //does not return useful info
 // function getTrackInfo() {
