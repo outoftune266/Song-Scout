@@ -38,6 +38,6 @@ function getArtist(){
 
         artistDiv.append(pThree);
 
-        $(".artistInfo").prepend(artistDiv);
+        $("#artistInfo").prepend(artistDiv);
 
       })};

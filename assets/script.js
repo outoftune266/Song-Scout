@@ -1,5 +1,5 @@
-let artist= "Weezer"
-let album = "tragic kingdom"
+//let artist= "Weezer"
+//let album = "tragic kingdom"
 let song;
 const APIURLgetArtist = "https://theaudiodb.com/api/v1/json/1/search.php?s=";
 const APIURLgetAlbum = "https://theaudiodb.com/api/v1/json/1/searchalbum.php?a=";
