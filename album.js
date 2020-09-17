@@ -54,6 +54,6 @@ function getAlbum(){
 
         idAlbum = response.album[0].idAlbum;
 
-        $(".albumInfo").prepend(albumDiv);
+        $("#albumInfo").prepend(albumDiv);
 
       })};
