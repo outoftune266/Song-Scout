@@ -56,4 +56,6 @@ function getAlbum(){
 
         $("#albumInfo").prepend(albumDiv);
 
+        getTracklist();
+
       })};

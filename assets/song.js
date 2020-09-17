@@ -1,5 +1,4 @@
 //let idAlbum = 2113128;
-let trackID = "3b098d24-325e-4451-89d8-4e3d0c3d8ae9";
 let name = "The Polyphonic Spree"
 let title = "Hold Me Now"
 let tracklist;
@@ -15,21 +14,22 @@ function getTracklist() {
         method: "GET"
     }).then(function (response) {
         console.log(response)
-        tracklist = response;
+        tracklist = response.track;
         //to get tracks use tracklist.track[i].strTrack
-        name = tracklist.track[0].strArtist
+        name = response.track[0].strArtist
+        let trackdiv = $("<div id ='tracks'>");
+        let list = $("<ol>");
+        for (var i = 0; i < tracklist.length; i++) {
+            track = $("<li>").text(tracklist[i].strTrack);
+            //track.text(tracklist[i].strTrack);
+            list.append(track);
+        };
+        trackdiv.append(list);
+        $("#albumInfo").append(trackdiv);
     });
-    displayTracks()
+    
 };
 
-//displays tracklist
-function displayTracks() {
-    for (var i = 0; i < tracklist.length; i++) {
-        track = $("<li>");
-        track.text(tracklist.track[i].strTrack);
-        $("ol").append(track);
-    };
-};
 
 function getLyrics() {
     //title = 
