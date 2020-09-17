@@ -1,5 +1,6 @@
 let album = "Adore"
 
+let idAlbum; 
 
 
 
@@ -13,32 +14,46 @@ function getAlbum(){
 
         console.log(response);
 
-        //var artistDiv = $("<div class = 'artist'>"); 
+        var albumDiv = $("<div class = 'album'>"); 
 
-        //var artistName = response.artists[0].strArtist;
+        var artistName = response.album[0].strArtist;
 
-        //var pOne = $("<p>").text("Artist: " + artistName);
+        var pOne = $("<p>").text("Artist: " + artistName);
 
-        //artistDiv.append(pOne);
+        albumDiv.append(pOne);
 
-        //var artistSite = response.artists[0].strWebsite;
+        var albumName = response.album[0].strAlbum;
 
-        //var pTwo = $("<p>").text("Website: " + artistSite);
+        var pTwo = $("<p>").text("Album: " + albumName);
 
-        //artistDiv.append(pTwo);
+        albumDiv.append(pTwo);
 
-        //var artistImage = response.artists[0].strArtistThumb;
+        var releaseYear = response.album[0].intYearReleased;
 
-        //var image  = $("<img>").attr("src", artistImage);
+        var pThree = $("<p>").text("Year Released: " + releaseYear);
 
-        //artistDiv.append(image);
+        albumDiv.append(pThree);
 
-        //var artistBio = response.artists[0].strBiographyEN;
+        var albumGenre = response.album[0].strGenre;
 
-        //var pThree = $("<p>").text("Artist Biography: " + artistBio);
+        var pFour = $("<p>").text("Genre: " + albumGenre);
 
-        //artistDiv.append(pThree);
+        albumDiv.append(pFour);
 
-        //$(".artistInfo").prepend(artistDiv);
+        var albumDescription = response.album[0].strDescriptionEN;
+
+        var pFive = $("<p>").text("Album Description: " + albumDescription);
+
+        albumDiv.append(pFive);
+        
+        var albumCover = response.album[0].strAlbumThumb;
+
+        var image  = $("<img>").attr("src", albumCover);
+
+        albumDiv.append(image);
+
+        idAlbum = response.album[0].idAlbum;
+
+        $(".albumInfo").prepend(albumDiv);
 
       })};
