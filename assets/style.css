@@ -54,3 +54,11 @@ body.home #canvas-wrapper #granim-canvas {
 li {
     cursor: pointer;
 }
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}

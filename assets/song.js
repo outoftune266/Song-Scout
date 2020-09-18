@@ -26,6 +26,8 @@ function getTracklist() {
         };
         trackdiv.append(list);
         $("#albumInfo").append(trackdiv);
+        let button = $("<button class='newSearch'>").text("New Search");
+        $("#albumInfo").append(button);
     });
 };
 
@@ -39,10 +41,27 @@ $("#albumInfo").on("click", "li", function(event) {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        $("#songTitle").text(title);
-        $("#artistName").text(name);
+        let songTitle = $("<h3>").text(title);
+        $("#song").append(songTitle);
+        let artistName = $("<h4>").text("by:" + name);
+        $("#song").append(artistName);
         lyrics = response.lyrics
         lyrics = response.lyrics.replace(/\n/ig, "</br>");
-        $("#song").html(lyrics);
+        let songLyrics = $("<div>").html(lyrics);
+        $("#song").append(songLyrics);
+        let button = $("<button class='newSearch'>").text("New Search");
+        $("#song").append(button);
+        $("#song").removeClass("hidden");
+        $("#albumInfo").addClass("hidden");
     });
 });
+
+$(document).on("click", ".newSearch", function() {
+    $("#artistInfo").empty();
+    $("#albumInfo").empty();
+    $("#song").empty();
+    $("#artistInfo").addClass("hidden");
+    $("#albumInfo").addClass("hidden");
+    $("#song").addClass("hidden");
+    $("#maindiv").removeClass("hidden");
+})
