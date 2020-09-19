@@ -6,7 +6,7 @@ $("#select-album").on("click", function(event) {
   // Preventing the button from trying to submit the form
   event.preventDefault();
   // Storing the artist name
-  var inputArtist = $("#autocomplete-input").val().trim();
+  var inputArtist = $("#search-input").val().trim();
   // if(inputArtist === ""){
   //   return;
   // }
@@ -58,13 +58,13 @@ function getAlbum(album){
 
         var albumDescription = response.album[0].strDescriptionEN;
 
-        var pFive = $("<p>").text("Album Description: " + albumDescription);
+        var textBox = $("<textarea class=scrollableTextBox id=albumTextBox>").text("Album Description: " + albumDescription);
 
-        albumDiv.append(pFive);
+        albumDiv.append(textBox);
         
         var albumCover = response.album[0].strAlbumThumb;
 
-        var image  = $("<img>").attr("src", albumCover);
+        var image  = $("<img class=albumCover>").attr("src", albumCover);
 
         albumDiv.append(image);
 

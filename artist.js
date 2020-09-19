@@ -1,20 +1,18 @@
-
-// let artist = "Lynyrd Skynyrd"
-
 // Event handler for user clicking the select-artist button
 $("#select-artist").on("click", function(event) {
+
   // Preventing the button from trying to submit the form
   event.preventDefault();
+
   // Storing the artist name
-  var inputArtist = $("#autocomplete-input").val().trim();
+  var artist = $("#search-input").val().trim();
   // if(inputArtist === ""){
   //   return;
   // }
-  //check the input is working right
-  console.log(inputArtist)
 
-  // Running the searchBandsInTown function(passing in the artist as an argument)
-  getArtist(inputArtist);
+
+  // Running the getArtist() function passing artist as the parameter
+  getArtist(artist);
   
 });
 
@@ -44,15 +42,15 @@ function getArtist(artist){
 
         var artistImage = response.artists[0].strArtistThumb;
 
-        var image  = $("<img>").attr("src", artistImage);
+        var image  = $("<img class=artistImage>").attr("src", artistImage);
 
         artistDiv.append(image);
 
         var artistBio = response.artists[0].strBiographyEN;
 
-        var pThree = $("<p>").text("Artist Biography: " + artistBio);
+        var textBox = $("<textarea class=scrollableTextBox id=artistTextBox>").text("Artist Biography: " + artistBio);
 
-        artistDiv.append(pThree);
+        artistDiv.append(textBox);
 
         $("#artistInfo").prepend(artistDiv);
 
