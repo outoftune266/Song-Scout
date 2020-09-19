@@ -30,15 +30,17 @@ function getArtist(artist){
 
         var artistName = response.artists[0].strArtist;
 
-        var pOne = $("<p>").text("Artist Name: " + artistName);
+        var pOne = $("<p id=artistName>").text("Artist Name: " + artistName);
 
         artistDiv.append(pOne);
 
         var artistSite = response.artists[0].strWebsite;
+ 
+        var link = $("<a id=website target='_blank'>").attr("href", "https://" + artistSite);
+            
+        link.text("Official Website of " + artistName);
 
-        var pTwo = $("<p>").text("Website: " + artistSite);
-
-        artistDiv.append(pTwo);
+        artistDiv.append(link);
 
         var artistImage = response.artists[0].strArtistThumb;
 
