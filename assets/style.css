@@ -70,3 +70,16 @@ li {
     font-size: 82%;
     overflow:scroll;
     }
+
+
+    img {
+        position: absolute;
+        top: 8px;
+        margin-right: 16px;
+       font-size: 18px;
+      }
+
+      p { 
+        margin-top: 33px; 
+        margin-right: 10px; 
+      } 
