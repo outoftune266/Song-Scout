@@ -70,6 +70,11 @@ function getAlbum(album){
 
         idAlbum = response.album[0].idAlbum;
 
-        $(".albumInfo").prepend(albumDiv);
+        $("#albumInfo").prepend(albumDiv);
+
+        getTracklist();
+
+        $("#albumInfo").removeClass("hidden");
+        $("#maindiv").addClass("hidden");
 
       })};

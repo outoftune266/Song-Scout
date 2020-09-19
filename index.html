@@ -8,6 +8,7 @@
   <!--Import materialize.css-->
   <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="assets/style.css"/>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   
   <!--Let browser know website is optimized for mobile-->
@@ -29,6 +30,7 @@
   </header>
   
   <!-- Section: Slider -->
+  <div id="maindiv">
   <section class="slider">
     <ul class="slides">
       <li>
@@ -115,15 +117,15 @@
       </div>
     </div>
   </section>
+</div>
 
-  <div class="artistInfo"></div>
-  <div class="albumInfo"></div>
-  
+  <div id ="artistInfo"></div>
 
-  <!-- <div class = 'artist'></div>
+  <div id ="albumInfo"></div>
 
-  <div class = 'album'></div> -->
-  
+  <div id = "song">
+  </div>
+
   <footer class="section blue white-text darken-2 center">
     <p>Designed by Zak Monnet, Beshayr Said, and Andrea &copy; 2020</p>
   </footer>
@@ -140,10 +142,10 @@
   <script src="./js/slider.js"></script>
   <script src="assets/script.js"></script>
   <script src="assets/song.js"></script>
-  <script src="artist.js"></script>
-  <script src="album.js"></script>
-  
-  
+
+  <script src = "./album.js"></script>
+  <script src = "./artist.js"></script>
+
 </body>
 
 </html>

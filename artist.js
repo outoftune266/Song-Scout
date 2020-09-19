@@ -54,7 +54,13 @@ function getArtist(artist){
 
         artistDiv.append(pThree);
 
-        $(".artistInfo").prepend(artistDiv);
+        $("#artistInfo").prepend(artistDiv);
 
+
+        let button = $("<button class='newSearch'>").text("New Search");
+        $("#artistInfo").append(button);
+
+        $("#maindiv").addClass("hidden");
+        
       })};
-      
+
