@@ -88,45 +88,62 @@
   <section class="section section-icons grey lighten-4 center">
     <div class="container">
       <div class="row">
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="card-panel">
             <!-- <i class="fas fa-guitar">audiotrack</i> -->
             <i class="material-icons large blue-text">keyboard_voice</i> 
             <h4>Artist</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nulla quis sed voluptatem earum vitae.</p>
-            <button type="submit" class="btn btn-large search blue">Profile</button>
+            <button type="submit" id="select-artist" class="btn btn-large search blue">Profile</button>
           </div>
-        </div><div class="col s12 m4">
+        </div><div class="col s12 m6">
           <div class="card-panel">
             <i class="material-icons large blue-text">album</i>
             <h4>Album</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nulla quis sed voluptatem earum vitae.</p>
-            <button type="submit" class="btn btn-large search blue">Album</button>
+            <button type="submit" id = "select-album" class="btn btn-large search blue">Album</button>
           </div>
         </div>
-        <div class="col s12 m4">
+        <!-- <div class="col s12 m4">
           <div class="card-panel">
             <i class="material-icons large blue-text">headset</i>
             <h4>Song</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nulla quis sed voluptatem earum vitae.</p>
             <button type="submit" class="btn btn-large search blue">Song</button>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
 
- 
+  <div class="artistInfo"></div>
+  <div class="albumInfo"></div>
+  
+
+  <!-- <div class = 'artist'></div>
+
+  <div class = 'album'></div> -->
+  
   <footer class="section blue white-text darken-2 center">
     <p>Designed by Zak Monnet, Beshayr Said, and Andrea &copy; 2020</p>
   </footer>
 
   <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="./js/slider.js"></script>
   <script src="assets/script.js"></script>
   <script src="assets/song.js"></script>
+  <script src="artist.js"></script>
+  <script src="album.js"></script>
+  
+  
 </body>
 
 </html>

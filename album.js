@@ -1,16 +1,32 @@
-let album = "Adore"
+// let album = "Adore"
 
-let idAlbum; 
+// let idAlbum; 
+// Event handler for user clicking the select-artist button
+$("#select-album").on("click", function(event) {
+  // Preventing the button from trying to submit the form
+  event.preventDefault();
+  // Storing the artist name
+  var inputArtist = $("#autocomplete-input").val().trim();
+  // if(inputArtist === ""){
+  //   return;
+  // }
+  //check the input is working right
+  console.log(inputArtist)
+
+  // Running the searchBandsInTown function(passing in the artist as an argument)
+ getAlbum(inputArtist);
+  
+});
 
 
 
-
-function getAlbum(){
+function getAlbum(album){
     var queryURL = "https://theaudiodb.com/api/v1/json/1/searchalbum.php?a=" + album + "&apikey=523532";
     $.ajax({
         url: queryURL,
         method: "GET"
-      }).then(function(response){
+      }).then(function(response){        
+        
 
         console.log(response);
 
