@@ -56,4 +56,9 @@ function getAlbum(){
 
         $("#albumInfo").prepend(albumDiv);
 
+        getTracklist();
+
+        $("#albumInfo").removeClass("hidden");
+        $("#maindiv").addClass("hidden");
+
       })};
