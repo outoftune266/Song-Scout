@@ -30,47 +30,49 @@ function getAlbum(album){
 
         console.log(response);
 
-        var albumDiv = $("<div class = 'album'>"); 
+        let albumDiv = $("<div class = 'album'>"); 
+        let albumimgDiv = $("<div class = 'albumImage'>"); 
 
-        var artistName = response.album[0].strArtist;
+        let artistName = response.album[0].strArtist;
 
-        var pOne = $("<p>").text("Artist: " + artistName);
+        let pOne = $("<p>").text("Artist: " + artistName);
 
         albumDiv.append(pOne);
 
-        var albumName = response.album[0].strAlbum;
+        let albumName = response.album[0].strAlbum;
 
-        var pTwo = $("<p>").text("Album: " + albumName);
+        let pTwo = $("<p>").text("Album: " + albumName);
 
         albumDiv.append(pTwo);
 
-        var releaseYear = response.album[0].intYearReleased;
+        let releaseYear = response.album[0].intYearReleased;
 
-        var pThree = $("<p>").text("Year Released: " + releaseYear);
+        let pThree = $("<p>").text("Year Released: " + releaseYear);
 
         albumDiv.append(pThree);
 
-        var albumGenre = response.album[0].strGenre;
+        let albumGenre = response.album[0].strGenre;
 
-        var pFour = $("<p>").text("Genre: " + albumGenre);
+        let pFour = $("<p>").text("Genre: " + albumGenre);
 
         albumDiv.append(pFour);
 
-        var albumDescription = response.album[0].strDescriptionEN;
+        let albumDescription = response.album[0].strDescriptionEN;
 
-        var textBox = $("<textarea class=scrollableTextBox id=albumTextBox>").text("Album Description: " + albumDescription);
+        let textBox = $("<textarea class=scrollableTextBox id=albumTextBox>").text("Album Description: " + albumDescription);
 
         albumDiv.append(textBox);
         
-        var albumCover = response.album[0].strAlbumThumb;
+        let albumCover = response.album[0].strAlbumThumb;
 
-        var image  = $("<img class=albumCover>").attr("src", albumCover);
+        let image  = $("<img class=albumCover width=700 height=600>").attr("src", albumCover);
 
-        albumDiv.append(image);
-
+        //albumDiv.append(image);
+        albumimgDiv.append(image)
         idAlbum = response.album[0].idAlbum;
 
         $("#albumInfo").prepend(albumDiv);
+        $("#albumImgInfo").prepend(albumimgDiv);
 
         getTracklist();
 
