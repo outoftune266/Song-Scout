@@ -57,7 +57,7 @@ function getArtist(artist){
         $("#artistInfo").prepend(artistDiv);
 
 
-        let button = $("<button class='newSearch'>").text("New Search");
+        let button = $("<button class='newSearch btn btn-large search blue'>").text("New Search");
         $("#artistInfo").append(button);
 
         $("#maindiv").addClass("hidden");
