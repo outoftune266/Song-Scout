@@ -53,15 +53,20 @@ $("#albumInfo").on("click", "li", function(event) {
         $("#song").append(button);
         $("#song").removeClass("hidden");
         $("#albumInfo").addClass("hidden");
+        $("#albumImgInfo").addClass("hidden");
     });
 });
 
 $(document).on("click", ".newSearch", function() {
     $("#artistInfo").empty();
     $("#albumInfo").empty();
+    $("#albumImgInfo").empty();
     $("#song").empty();
     $("#artistInfo").addClass("hidden");
     $("#albumInfo").addClass("hidden");
+    $("#albumImgInfo").addClass("hidden");
     $("#song").addClass("hidden");
     $("#maindiv").removeClass("hidden");
+    
+
 })
