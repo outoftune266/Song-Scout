@@ -43,6 +43,11 @@ li {
    
 }
 
+#artistInfo {
+    margin-top : 50px;
+    margin-left : 20px;
+}
+
 #song{
     padding-left: 300px;
 }

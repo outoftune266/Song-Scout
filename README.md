@@ -16,7 +16,7 @@ USER STORY:
 - THEN USER can click on a displayed song title and lyrics for that song will be displayed
 
 Future Development Goals:
-- Use ablum/song data to provide links for listening to album/song
+- Use album/song data to provide links for listening to album/song
 - Ability to view Sales/Airplay Chart Data for Artist/Albums/Tracks
 - Ability to save a list of favorite artists/albums/songs for easy retieval in the future
 
@@ -29,7 +29,7 @@ API's Used:
 - The Audio DB: [Website](https://www.theaudiodb.com/)
 - Lyrics.ovh:   [Website](https://github.com/NTag/lyrics.ovh)
 
-Libraries used:
+Libraries Used:
 - Bootstrap:   [Website](https://getbootstrap.com/)
 - Materialize: [Website](https://materializecss.com/)
 - Granim.js:   [Website](https://sarcadass.github.io/granim.js/)
