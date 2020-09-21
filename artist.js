@@ -5,7 +5,7 @@ $("#select-artist").on("click", function(event) {
   event.preventDefault();
 
   // Storing the artist name
-  var artist = $("#search-input").val().trim();
+  let artist = $("#search-input").val().trim();
   // if(inputArtist === ""){
   //   return;
   // }
@@ -18,7 +18,7 @@ $("#select-artist").on("click", function(event) {
 
 
 function getArtist(artist){
-    var queryURL = "https://theaudiodb.com/api/v1/json/1/search.php?s=" + artist + "&apikey=523532";
+    let queryURL = "https://theaudiodb.com/api/v1/json/1/search.php?s=" + artist + "&apikey=523532";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -26,35 +26,40 @@ function getArtist(artist){
         //checking the API data is fetch correctly
         console.log(response);
 
-        var artistDiv = $("<div class = 'artist'>"); 
+        let artistDiv = $("<div class = 'artist'>"); 
+        let artistImgDiv = $("<div class = 'artistImg'>");
 
-        var artistName = response.artists[0].strArtist;
+        let artistName = response.artists[0].strArtist;
 
-        var pOne = $("<p id=artistName>").text("Artist Name: " + artistName);
+        let h2 = $("<h2 id=artistName>").text(artistName);
 
-        artistDiv.append(pOne);
+        artistDiv.append(h2);
 
-        var artistSite = response.artists[0].strWebsite;
+        let artistSite = response.artists[0].strWebsite;
  
-        var link = $("<a id=website target='_blank'>").attr("href", "https://" + artistSite);
+        let link = $("<a id=website target='_blank'>").attr("href", "https://" + artistSite);
             
         link.text("Official Website of " + artistName);
 
         artistDiv.append(link);
+        artistDiv.append("<br>");
+        let artistImage = response.artists[0].strArtistThumb;
 
-        var artistImage = response.artists[0].strArtistThumb;
+        let image  = $("<img class=artistImage>").attr("src", artistImage);
 
-        var image  = $("<img class=artistImage>").attr("src", artistImage);
+        artistImgDiv.append(image);
 
-        artistDiv.append(image);
+        let artistBio = response.artists[0].strBiographyEN;
 
-        var artistBio = response.artists[0].strBiographyEN;
-
-        var textBox = $("<textarea class=scrollableTextBox id=artistTextBox>").text("Artist Biography: " + artistBio);
+        let textBox = $("<textarea class=scrollableTextBox id=artistTextBox>").text("Artist Biography: " + artistBio);
 
         artistDiv.append(textBox);
 
         $("#artistInfo").prepend(artistDiv);
+        $("#artistImg").prepend(artistImgDiv);
+
+        $("#artistInfo").removeClass("hidden");
+        $("#artistImg").removeClass("hidden");
 
 
         let button = $("<button class='newSearch'>").text("New Search");

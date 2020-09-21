@@ -77,6 +77,7 @@ function getAlbum(album){
         getTracklist();
 
         $("#albumInfo").removeClass("hidden");
+        $("#albumImgInfo").removeClass("hidden");
         $("#maindiv").addClass("hidden");
 
       })};
