@@ -62,6 +62,7 @@ $(document).on("click", ".newSearch", function() {
     $("#albumInfo").empty();
     $("#albumImgInfo").empty();
     $("#song").empty();
+    $("#artistImg").empty();
     $("#artistInfo").addClass("hidden");
     $("#albumInfo").addClass("hidden");
     $("#albumImgInfo").addClass("hidden");
