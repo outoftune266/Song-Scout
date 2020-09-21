@@ -26,7 +26,7 @@ function getTracklist() {
         };
         trackdiv.append(list);
         $("#albumInfo").append(trackdiv);
-        let button = $("<button class='newSearch'>").text("New Search");
+        let button = $("<button class='newSearch btn btn-large search blue'>").text("New Search");
         $("#albumInfo").append(button);
     });
 };
@@ -49,7 +49,7 @@ $("#albumInfo").on("click", "li", function(event) {
         lyrics = response.lyrics.replace(/\n/ig, "</br>");
         let songLyrics = $("<div>").html(lyrics);
         $("#song").append(songLyrics);
-        let button = $("<button class='newSearch'>").text("New Search");
+        let button = $("<button class='newSearch btn btn-large search blue'>").text("New Search");
         $("#song").append(button);
         $("#song").removeClass("hidden");
         $("#albumInfo").addClass("hidden");
