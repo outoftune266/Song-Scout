@@ -4,7 +4,7 @@ Project #1
 Song Scout is an essential tool for any music fan. It allows you to get to know your favorite artists and albums more intimately, by providing essential biographic information.
 
 Preview:
-![Preview of application](./assets/preview.png)
+![Preview of application](./img/preview.png)
 
 See it in action:
 [Click Me](https://andrea-boyd.github.io/Song-Scout/)

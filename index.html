@@ -6,18 +6,15 @@
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="assets/style.css" />
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
-  <!--Let browser know website is optimized for mobile-->
+  <link rel="stylesheet" href="./assets/css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Song Scout</title>
 </head>
 
 <body>
   <header>
+    <!--Nav Bar-->
     <div class="navbar-fixed">
       <nav class="blue">
         <div class="container">
@@ -29,56 +26,49 @@
     </div>
   </header>
 
-  <!-- Section: Slider -->
+  <!-- Carousel -->
   <div id="maindiv">
     <section class="slider">
       <ul class="slides">
         <li>
-          <img src="./img/resort-01.jpg" alt="A crowd of fans at a concert">
+          <img src="./assets/img/resort-01.jpg" alt="A crowd of fans at a concert">
           <div class="caption left-align">
             <h2>Search by Artist</h2>
             <h5 class="light grey-text text-lighten-3 hide-on-small-only">
               Explore artist profiles
             </h5>
-            <!-- <a href="#!" class="btn btn-large">Search</a> -->
           </div>
         </li>
         <li>
-          <img src="./img/resort-02.jpg" alt="A crowd of fans at a concert">
+          <img src="./assets/img/resort-02.jpg" alt="A crowd of fans at a concert">
           <div class="caption center-align">
             <h2>Search by Album</h2>
             <h5 class="light text-lighten-1 hide-on-small-only">
               View album cover art and track listing
             </h5>
-            <!-- <a href="#!" class="btn btn-large">Search</a> -->
           </div>
         </li>
         <li>
-          <img src="./img/resort-03.jpg" alt="A crowd of fans at a concert">
+          <img src="./assets/img/resort-03.jpg" alt="A crowd of fans at a concert">
           <div class="caption right-align">
             <h2>Listen to the Music</h2>
             <h5 class="light text-lighten-3 hide-on-small-only">
               Select songs from track listings
             </h5>
-            <!-- <a href="#!" class="btn btn-large">Search</a> -->
           </div>
         </li>
       </ul>
     </section>
 
-    <!-- Section: Search -->
+    <!-- Search -->
     <section class="section section-search darken-2 white-text center-align">
       <div class="container">
         <div class="row">
           <div class="col s12">
-            <!-- <h3>Search Destinations</h3> -->
             <div class="input-field">
               <div class="col offset-s1 s8">
                 <input type="text" name="" id="search-input" class="white grey-text autocomplete"
                   placeholder="Enter Artist or Album Name...">
-              </div>
-              <div class="col s2">
-                <!-- <button type="submit" class="btn btn-large search blue">Search</button> -->
               </div>
             </div>
           </div>
@@ -86,13 +76,12 @@
       </div>
     </section>
 
-    <!-- Section: Icon Boxes -->
+    <!-- Icon Boxes for Album and Artist searches -->
     <section class="section section-icons center picnic">
       <div class="container">
         <div class="row">
           <div class="col s12 m6">
             <div class="card-panel">
-              <!-- <i class="fas fa-guitar">audiotrack</i> -->
               <i class="material-icons large blue-text">keyboard_voice</i>
               <h4>Artist Info</h4>
               <p>Enter artist or band name in the search bar above and click "artist" button below to view
@@ -109,27 +98,10 @@
               <button type="submit" id="select-album" class="btn btn-large search blue">Album</button>
             </div>
           </div>
-          <!-- <div class="col s12 m4">
-          <div class="card-panel">
-            <i class="material-icons large blue-text">headset</i>
-            <h4>Song</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nulla quis sed voluptatem earum vitae.</p>
-            <button type="submit" class="btn btn-large search blue">Song</button>
-          </div>
-        </div> -->
         </div>
       </div>
-
     </section>
-
-
-    <!-- <section class="section section-icons center picnic">
-      
-
-    </section> -->
-
-    
-  </div>
+ </div>
 
   <div class="InfoContainer">
     <div class="row">
@@ -141,14 +113,7 @@
       </div>
     </div>
   </div>
-  
-  </div>
 
-
-
-
-
-  </div>
 
   <div class="InfoContainer">
     <div class="row">
@@ -161,20 +126,14 @@
     </div>
   </div>
   
-  </div>
-
-  
-
-
   <div id="song"></div>
 
   <canvas id="canvas-basic"></canvas>
+  
   <footer class="footer section blue white-text darken-2 center">
     <p>Designed by Zak Monnet, Beshayr Said, and Andrea Boyd &copy; 2020</p>
   </footer>
 
-  <!--Import jQuery before materialize.js-->
-  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -185,14 +144,13 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script src="./js/slider.js"></script>
-  <script src="assets/script.js"></script>
-  <script src="assets/song.js"></script>
-  <script src="./album.js"></script>
-  <script src="./artist.js"></script>
+  <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/song.js"></script>
+  <script src="./assets/js/album.js"></script>
+  <script src="./assets/js/artist.js"></script>
 
 </body>
 
