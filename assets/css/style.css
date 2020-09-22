@@ -1,0 +1,120 @@
+li {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.scrollableTextBox {
+    height:180px;
+    width:600px;
+    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 82%;
+    overflow:scroll;
+    }
+
+  
+    #canvas-basic {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 5000px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+        opacity: 0.5
+    }
+
+.picnic {
+    background-color: rgba(0,0,0,0);
+}
+.InfoContainer{
+
+    margin-top : 50px;
+    margin-left : 20px;
+   
+}
+
+#artistInfo {
+    margin-top : 50px;
+    margin-left : 20px;
+}
+
+#song{
+    padding-left: 300px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    }
+
+    html {
+        font-size: 16px;
+      }
+      
+      .brand {
+        font-size: 2rem;
+      }
+      
+      .caption .btn {
+        margin-top: 2rem;
+      }
+      
+      .section-search {
+        /* background: rgba(0, 121, 107, 0.3); */
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        width: 80%;
+        z-index: 10;
+        /* padding-bottom: 0.6rem; */
+      }
+      
+      .section-search h3 {
+        margin: 0;
+        padding: 1rem;
+      }
+      
+      .section-search input {
+        padding: 0.15rem 0.5rem !important; 
+      }
+      
+      .section-search .input-field .col {
+        padding: 0;
+      }
+      
+      .autocomplete-content {
+        position: absolute;
+        width: 100%;
+        margin-top: 50px;
+      }
+      
+      .section-icons .card-panel {
+        margin-top: 50px;
+      }
+      
+      
+      .temp {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      
+      .search-history {
+        display: none;
+      }
+      
+      

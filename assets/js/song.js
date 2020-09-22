@@ -1,9 +1,10 @@
-//let idAlbum = 2113128;
+
 let name;
 let title;
 let tracklist;
 let lyrics;
 let track;
+let song;
 
 
 //will retrieve tracklist info
@@ -13,7 +14,7 @@ function getTracklist() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        //console.log(response)
+ 
         tracklist = response.track;
         //to get tracks use tracklist.track[i].strTrack
         name = response.track[0].strArtist
@@ -32,7 +33,7 @@ function getTracklist() {
 };
 
 $("#albumInfo").on("click", "li", function(event) {
-    //console.log(event.target);
+    
     title = event.target.innerHTML;
     var queryURL = "https://api.lyrics.ovh/v1/" + name + "/" + title;
 
@@ -45,8 +46,14 @@ $("#albumInfo").on("click", "li", function(event) {
         $("#song").append(songTitle);
         let artistName = $("<h4>").text("by:" + name);
         $("#song").append(artistName);
-        lyrics = response.lyrics
-        lyrics = response.lyrics.replace(/\n/ig, "</br>");
+         if (response.lyrics === ""){
+            lyrics = "No lyrics found"
+         }
+         else{
+            lyrics = response.lyrics
+            lyrics = response.lyrics.replace(/\n/ig, "</br>");
+         }
+    
         let songLyrics = $("<div>").html(lyrics);
         $("#song").append(songLyrics);
         let button = $("<button class='newSearch btn btn-large search blue'>").text("New Search");
