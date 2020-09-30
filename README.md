@@ -7,7 +7,7 @@ Preview:
 ![Preview of application](./assets/img/preview.png)
 
 See it in action:
-[Click Me](https://andrea-boyd.github.io/Song-Scout/)
+[Click Me](https://outoftune266.github.io/Song-Scout/)
 
 USER STORY:
 - WHEN USER (a music fan) wants to find more information on their favorite artists/ablums/songs
@@ -34,6 +34,5 @@ Libraries Used:
 - Materialize: [Website](https://materializecss.com/)
 - Granim.js:   [Website](https://sarcadass.github.io/granim.js/)
 
-
-See it in action:
-[Click Me](https://andrea-boyd.github.io/Song-Scout/)
+License:
+- MIT
